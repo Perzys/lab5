@@ -1,15 +1,19 @@
 'use strict';
 
 // Call this function when the page loads (the "ready" event)
-$(document).ready(function() {
-	initializePage();
-})
+// $(document).ready(function() {
+// 	$("button").click(function()
+// 	{
+// 	})
+// 	initializePage();
+// })
 
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$("name").click(projectClick);
 }
 
 function anagrammedName(name) {
@@ -43,4 +47,11 @@ function anagrammedName(name) {
 		console.log(name + " not known for anagramming.");
 		return name;
 	}
+}
+
+function projectClick(e) {
+	$(e).preventDefault();
+	$(this).text(annagrammedName(name));
+	console.log("name clicked")
+
 }
